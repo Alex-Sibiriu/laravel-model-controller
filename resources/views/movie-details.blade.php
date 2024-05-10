@@ -1,7 +1,7 @@
 @extends('layout.main')
 
 @section('content')
-    <div class="container d-flex">
+    <div class="container d-flex text-white">
         <div>
             <img src="{{ $movie->image }}" alt="{{ $movie->title }}">
         </div>

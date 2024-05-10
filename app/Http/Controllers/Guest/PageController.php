@@ -11,15 +11,17 @@ class PageController extends Controller
     public function index()
     {
         $movies = Movie::all();
+        $title = 'Tutti i Film';
 
-        return view('home', compact('movies'));
+        return view('home', compact('movies', 'title'));
     }
 
     public function topRated()
     {
         $movies = Movie::where('vote', '>', 9)->get();
+        $title = 'I Migliori Film';
 
-        return view('home', compact('movies'));
+        return view('home', compact('movies', 'title'));
     }
 
     public function movieDetails($id)
