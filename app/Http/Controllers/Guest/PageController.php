@@ -15,8 +15,17 @@ class PageController extends Controller
         return view('home', compact('movies'));
     }
 
-    public function nuovaPagina()
+    public function topRated()
     {
-        return view('nuova-pagina');
+        $movies = Movie::where('vote', '>', 9)->get();
+
+        return view('home', compact('movies'));
+    }
+
+    public function movieDetails($id)
+    {
+        $movie = Movie::find($id);
+
+        return view('movie-details', compact('movie'));
     }
 }

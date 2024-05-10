@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,13 +11,15 @@
 
     <title>Template</title>
 </head>
-<body>
+
+<body class="bg-dark">
     @include('partials.header')
 
-    <main>
+    <main class="py-5">
         @yield('content')
     </main>
 
     @include('partials.footer')
 </body>
+
 </html>

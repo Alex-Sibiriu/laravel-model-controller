@@ -13,9 +13,8 @@ use App\Http\Controllers\Guest\PageController;
 |
 */
 
-Route::get('/',[PageController::class, 'index'])->name('home');
+Route::get('/', [PageController::class, 'index'])->name('home');
 
-Route::get('/nuova-pagina', [PageController::class, 'nuovaPagina'])->name('nuova-pagina');
+Route::get('/top-rated', [PageController::class, 'topRated'])->name('top-rated');
 
-
-
+Route::get('/dettagli-film/{id}', [PageController::class, 'movieDetails'])->name('movie-details');
