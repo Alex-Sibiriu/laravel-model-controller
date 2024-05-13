@@ -27,6 +27,9 @@ class PageController extends Controller
     public function movieDetails($id)
     {
         $movie = Movie::find($id);
+        if (!isset($movie)) {
+            abort(404);
+        }
 
         return view('movie-details', compact('movie'));
     }
